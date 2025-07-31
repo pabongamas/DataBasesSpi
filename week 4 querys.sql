@@ -25,7 +25,7 @@ select max(teachersalary) as maxsalary,min(teachersalary) as minsalary,avg(teach
 
 
 #7
-select STUDENTNAME,STUDENTSUBURB from STUDENT WHERE STUDENTSUBURB like 'R%';
+select SUBSTR(STUDENTNAME,1,INSTR(STUDENTNAME,' ')-1) AS NAME,STUDENTSUBURB FROM STUDENT WHERE STUDENTSUBURB like 'R%';
 
 
 #8
